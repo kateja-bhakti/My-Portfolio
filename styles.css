@@ -182,8 +182,9 @@
     }
 
     .contact-icons img {
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
+      border-radius: 35%;
       filter: brightness(1.2);
     }
 
