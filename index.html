@@ -1,143 +1,339 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bhakti Kateja Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bhakti Kateja — Software Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#0b1020">
 </head>
 <body>
+    <header class="nav-wrap" id="siteHeader">
+        <nav class="nav container" role="navigation" aria-label="Main navigation">
+            <a class="logo" href="#home">Bhakti<span>.</span></a>
 
-  <header class="header">
-    <h1>Bhakti Kateja</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certs" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
 
-  <section class="hero">
-    <h2>Hi, I'm Bhakti</h2>
-    <p>Aspiring Web Developer | BCA Student | Passionate Learner</p>
-  </section>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+                    <span class="sun">☀️</span><span class="moon">🌙</span>
+                </button>
+                <button class="cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Connect</button>
+                <button id="burger" class="burger" aria-label="Open menu">☰</button>
+            </div>
+        </nav>
+    </header>
 
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p>
-      I'm a curious and motivated BCA student from Kolhapur, Maharashtra with a strong interest in web development and programming. I enjoy creating user-friendly websites and solving technical challenges. I’m currently gaining experience with HTML, CSS, JavaScript, Java, and C.
-    </p>
-    <p>
-      I’ve consistently ranked 1st in all semesters and am looking forward to applying my skills in real-world projects.
-    </p>
-  </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="container hero-inner reveal">
+                <div class="hero-text">
+                    <h1 class="hero-title">Hi, I'm <span class="accent">Bhakti</span></h1>
+                    <p class="hero-sub">
+                        <span id="typewriter" class="typewriter" aria-hidden="true"></span>
+                    </p>
+                    <div class="hero-ctas">
+                        <a class="btn" href="#projects">View Projects</a>
+                        <a class="btn ghost" href="#contact">Contact Me</a>
+                    </div>
+                </div>
 
-  <section id="skills">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-marquee">
-      <div class="marquee-content">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript (Basic)</span>
-        <span>Java</span>
-        <span>C Programming</span>
-        <span>WordPress</span>
-        <span>MS Office</span>
-        <span>Time Management</span>
-        <span>Problem Solving</span>
-        <span>Team Collaboration</span>
-      </div>
+                <div class="hero-card">
+                    <div class="profile-photo" aria-hidden="true"></div>
+                    <div class="quick-info">
+                        <p><strong>Role</strong> Aspiring Software Developer</p>
+                        <p><strong>Location</strong> Kolhapur, India</p>
+                        <p><strong>Learning</strong> Advanced Java, React.js</p>
+                        <a class="resume" href="mailto:kateja.bhakti@gmail.com" id="resumeLink">Email Me Directly</a>
+
+                        <div class="socials-hero" aria-label="Social links">
+                            <a href="https://github.com/kateja-bhakti" target="_blank" class="social" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/bhakti-kateja" target="_blank" class="social" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="tel:7304428880" class="social" title="Call/WhatsApp" aria-label="Call/WhatsApp"><i class="fas fa-phone"></i></a>
+                            <a href="mailto:kateja.bhakti@gmail.com" class="social" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="social" title="Location" aria-label="Location"><i class="fas fa-map-marker-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container reveal split">
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p>
+                        I'm a <b>detail-oriented and passionate BCA student</b> aspiring to grow as an <b>Associate Software Engineer</b>. Proficient in <b>Java, C, HTML, CSS</b>, and with hands-on experience in developing functional projects like desktop and web applications.
+                    </p>
+                    <p>
+                        Known for <b>analytical thinking</b>, adaptability, and a strong desire to build efficient, user-focused software solutions. My core focus is on <b>Object-Oriented Programming (OOP)</b> principles and solving complex logical problems.
+                    </p>
+                    <ul class="about-list">
+                        <li><strong>Core Skills:</strong> Java, C, OOP, Web Technologies</li>
+                        <li><strong>Currently Learning:</strong> Advanced Java, MySQL, and React.js</li>
+                        <li><strong>Soft Skills:</strong> Problem Solving • Logical Thinking • Team Collaboration</li>
+                    </ul>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat reveal">
+                        <h3>9.15/10</h3>
+                        <p>Highest BCA GPA (Sem 3)</p>
+                    </div>
+                    <div class="stat reveal">
+                        <h3>5+</h3>
+                        <p>Functional Projects</p>
+                    </div>
+                    <div class="stat reveal">
+                        <h3>First Rank</h3>
+                        <p>Since 1st Sem (Honor Roll)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section section-alt">
+            <div class="container reveal">
+                <h2 class="section-title">Education</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">05/2026</div>
+                        <div class="timeline-content">
+                            <h3>Bachelors of Computer Application (BCA)</h3>
+                            <p>Bharati Vidyapeeth Institute of Management, Kolhapur</p>
+                            <p class="small muted">GPA Highlights: Sem 1: 8.0 | Sem 2: 9.5 | Sem 3: 9.15 | Sem 4: 8.60</p>
+                            <p class="small muted">**Honor Roll: First Rank Since 1st Sem**</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">01/2023</div>
+                        <div class="timeline-content">
+                            <h3>HSC (Higher Secondary Certificate)</h3>
+                            <p>Sadhu Vaswani Junior College, Gandhinagar, Kolhapur</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">01/2021</div>
+                        <div class="timeline-content">
+                            <h3>SSC (Secondary School Certificate)</h3>
+                            <p>Sant Shanti Prakash High School, Gandhinagar Kolhapur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Technical Skills</h2>
+                <p class="muted reveal">My proficiency across languages, concepts, and tools</p>
+
+                <div class="skills-grid">
+                    <div class="skill-chip reveal"><i class="fab fa-java skill-icon" aria-hidden="true"></i> Java</div>
+                    <div class="skill-chip reveal"><i class="fas fa-file-code skill-icon" aria-hidden="true"></i> C</div>
+                    <div class="skill-chip reveal"><i class="fab fa-html5 skill-icon" aria-hidden="true"></i> HTML5</div>
+                    <div class="skill-chip reveal"><i class="fab fa-css3-alt skill-icon" aria-hidden="true"></i> CSS3 / Bootstrap</div>
+                    <div class="skill-chip reveal"><i class="fab fa-js-square skill-icon" aria-hidden="true"></i> JavaScript (Beginner)</div>
+                    <div class="skill-chip reveal"><i class="fas fa-database skill-icon" aria-hidden="true"></i> MySQL (Basic)</div>
+                    <div class="skill-chip reveal"><i class="fas fa-cube skill-icon" aria-hidden="true"></i> OOP Concepts</div>
+                    <div class="skill-chip reveal"><i class="fab fa-git-alt skill-icon" aria-hidden="true"></i> Git / GitHub</div>
+                    <div class="skill-chip reveal"><i class="fas fa-terminal skill-icon" aria-hidden="true"></i> VS Code / IDEs</div>
+                </div>
+
+                <h3 class="section-title" style="margin-top: 40px; font-size: 1.6rem;">Soft & Language Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-chip reveal">Problem Solving</div>
+                    <div class="skill-chip reveal">Logical Thinking</div>
+                    <div class="skill-chip reveal">Team Collaboration</div>
+                    <div class="skill-chip reveal">Time Management</div>
+                    <div class="skill-chip reveal">English / Hindi / Marathi / Sindhi</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Projects</h2>
+                <p class="muted reveal">Functional applications and web projects</p>
+
+                <div class="projects-grid">
+                  
+                    <article class="project-card reveal">
+                        <div class="project-media" style="background-image:linear-gradient(135deg,#d80edf,#2390cf)">
+                            <div class="proj-tag">Web Portfolio</div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Personal Portfolio</h3>
+                            <p>This very portfolio site, demonstrating my ability to design and develop static websites using core web tech.</p>
+                            <div class="proj-links">
+                                <a href="#" class="link-link">Live (You are here)</a>
+                                <a href="https://github.com/kateja-bhakti/personal-portfolio" target="_blank" class="link-link">Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-media" style="background-image:linear-gradient(135deg,#2735b6,#06b6d4)">
+                            <div class="proj-tag">Java Desktop App</div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Smart Study Assistant</h3>
+                            <p>Java-based desktop app for managing study notes and schedules using **file handling** and **OOP concepts**.</p>
+                            <div class="proj-links">
+                                <a href="https://github.com/kateja-bhakti/smart-study-assistant" target="_blank" class="link-link">Code</a>
+                                <span class="muted small" style="margin-left: 10px;">(Desktop app)</span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="project-card reveal">
+                        <div class="project-media" style="background-image:linear-gradient(135deg,#f97316,#ef4444)">
+                            <div class="proj-tag">Web Game (Logic)</div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Number Guessing Game</h3>
+                            <p>A fun logic game built with core web technologies, featuring responsive UI and instant user feedback.</p>
+                            <div class="proj-links">
+                                <a href="https://github.com/kateja-bhakti/number-guessing-game" target="_blank" class="link-link">Code</a>
+                                <a href="https://numbersguessgame.netlify.app/" class="link-link">Live</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                    <article class="project-card reveal">
+                        <div class="project-media" style="background-image:linear-gradient(135deg,#930ae2,#764ba2)">
+                            <div class="proj-tag">Web Survey Form</div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Survey Form</h3>
+                            <p>A simple and responsive survey form created using HTML and CSS. It captures user feedback with various input types.</p>
+                            <div class="proj-links">
+                                <a href="#" class="link-link">(Made with HTML,CSS)</a>
+                                <a href="https://github.com/kateja-bhakti/Survey-form" target="_blank" class="link-link">Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="projects-grid">
+                  
+                    <article class="project-card reveal">
+                        <div class="project-media" style="background-image:linear-gradient(135deg,#d80edf,#2390cf)">
+                            <div class="proj-tag">Animated Digital Clock</div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Gradient Digital Clock</h3>
+                            <p>A real-time digital clock with a smooth animated gradient background, demonstrating DOM manipulation and dynamic styling.</p>
+                            <div class="proj-links">
+                                <a href="https://digitaltimecloc.netlify.app/" class="link-link">Live</a>
+                                <a href="https://github.com/kateja-bhakti/Digital-Clock" target="_blank" class="link-link">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="certs" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Certifications</h2>
+                <p class="muted reveal">Credentials that validate my technical foundation</p>
+
+                <div class="certs-grid">
+                    <div class="cert-card cert-thumb reveal" data-cert="https://dummyimage.com/1200x800/ccc/777.png&text=Mastering+C+Programming" tabindex="0">
+                        <img src="CLanguage.jpeg" alt="Mastering C Programming certificate">
+                        <div class="cert-body">
+                            <h4>Mastering C programming</h4>
+                            <p>Udemy</p>
+                            <button class="view-cert link-link">View</button>
+                        </div>
+                    </div>
+
+                    <div class="cert-card cert-thumb reveal" data-cert="https://dummyimage.com/1200x800/ddd/888.png&text=HTML+and+CSS" tabindex="0">
+                        <img src="HTML&CSS.jpeg" alt="HTML & CSS certificate">
+                        <div class="cert-body">
+                            <h4>HTML & CSS</h4>
+                            <p>Let's Upgrade</p>
+                            <button class="view-cert link-link">View</button>
+                        </div>
+                    </div>
+
+                    <div class="cert-card cert-thumb reveal" data-cert="https://dummyimage.com/1200x800/bbb/666.png&text=Basics+of+Programming" tabindex="0">
+                        <img src="programmingBasics.jpeg" alt="Basics of Programming certificate">
+                        <div class="cert-body">
+                            <h4>Basics of Programming</h4>
+                            <p>Great Learning</p>
+                            <button class="view-cert link-link">View</button>
+                        </div>
+                    </div>
+
+                    <div class="cert-card cert-thumb reveal" data-cert="https://dummyimage.com/1200x800/aaa/555.png&text=MS+Excel" tabindex="0">
+                        <img src="excel.jpeg" alt="MS Excel certificate">
+                        <div class="cert-body">
+                            <h4>MS Excel</h4>
+                            <p>Let's Upgrade</p>
+                            <button class="view-cert link-link">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container reveal split">
+                <div class="contact-card">
+                    <h2>Connect with Bhakti</h2>
+                    <p>Interested in working together? Email me or connect on GitHub / LinkedIn — I respond quickly.</p>
+
+                    <div class="contact-links">
+                        <a href="mailto:kateja.bhakti@gmail.com" class="contact-btn">kateja.bhakti@gmail.com</a>
+                        <a href="https://github.com/kateja-bhakti" target="_blank" class="contact-btn">GitHub</a>
+                        <a href="https://linkedin.com/in/bhakti-kateja" target="_blank" class="contact-btn">LinkedIn</a>
+                    </div>
+                </div>
+
+                <aside class="contact-aside">
+                    <h3>Quick Info</h3>
+                    <p class="muted">Seeking an Associate Software Engineer role or internship. Available to start upon graduation/immediately.</p>
+                    <ul class="contact-list">
+                        <li><strong>Location:</strong> Kolhapur, Maharashtra 416119</li>
+                        <li><strong>Phone:</strong> 7304428880</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p>© <span id="year"></span> Bhakti Kateja. Built with care.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/kateja-bhakti" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/bhakti-kateja" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="tel:7304428880" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <div id="cert-modal" class="modal" aria-hidden="true" role="dialog" aria-label="Certificate preview">
+        <button class="modal-close" aria-label="Close certificate">✕</button>
+        <img id="cert-img" class="modal-content" alt="Certificate enlarged">
     </div>
-  </section>
+    <button id="scrollTop" aria-label="Scroll to top">↑</button>
 
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>This very portfolio site, fully built using HTML and CSS, demonstrates my ability to design and develop static websites.</p>
-        <a href="https://github.com/kateja-bhakti/My-Portfolio" target="_blank" rel="noopener noreferrer">View Project</a>
-      </div>
-
-      <div class="card">
-        <h3>Survey Form</h3>
-        <p>A simple and responsive survey form created using HTML and CSS. It captures user feedback with various input types.</p>
-        <a href="https://github.com/kateja-bhakti/Survey-form" target="_blank" rel="noopener noreferrer">View Project</a>
-      </div>
-
-      <div class="card">
-        <h3>Flower Photo Gallery</h3>
-        <p>A visually appealing flower gallery using CSS Grid. Showcases images with hover effects and a responsive layout.</p>
-        <a href="https://github.com/kateja-bhakti/Flower-Photo-Gallery" target="_blank" rel="noopener noreferrer">View Project</a>
-      </div>
-
-      <div class="card">
-        <h3>Number Guessing Game</h3>
-        <p>A fun logic game where users try to guess a randomly generated number, featuring responsive UI and instant feedback.</p>
-        <a href="https://github.com/kateja-bhakti/Number-Guessing-Game" target="_blank" rel="noopener noreferrer">View Project</a>
-      </div>
-
-      <div class="card">
-        <h3>Gradient Digital Clock</h3>
-        <p>A real-time digital clock with a smooth animated gradient background, demonstrating DOM manipulation and dynamic styling.</p>
-        <a href="https://github.com/kateja-bhakti/Digital-Clock" target="_blank" rel="noopener noreferrer">View Project</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="certificates">
-    <h2 class="section-title">Certificates</h2>
-    <div class="card-container">
-      
-      <div class="card">
-        <h3>HTML & CSS</h3>
-          <img src="HTML&CSS.jpeg" alt="HTML & CSS" class="certificate-img">
-        </a>
-        <p>Completed the 3 days bootcamp organized by Let's Upgrade.</p>
-      </div>
-
-      <div class="card">
-        <h3>Basics of Programming</h3>
-          <img src="programmingBasics.jpeg" alt="Basics of Programming" class="certificate-img">
-        </a>
-        <p>Completed a foundational course in programming from Great Learning.</p>
-      </div>
-
-      <div class="card">
-        <h3>Mastering C Programming</h3>
-          <img src="CLanguage.jpeg" alt="Mastering C Programming" class="certificate-img">
-        </a>
-        <p>Completed on Udemy. Strengthened understanding of C syntax, logic, and problem-solving.</p>
-      </div>
-
-      <div class="card">
-        <h3>MS Excel</h3>
-          <img src="excel.jpeg" alt="MS Excel" class="certificate-img">
-        </a>
-        <p>Completed through Let's Upgrade. Learned key Excel functions for data management and reporting.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2 class="section-title">Contact Me</h2>
-    <div class="contact-links">
-      <div class="contact-icons">
-        <a href="kateja.bhakti@gmail.com"><img src="email.png" alt="Email icon"> kateja.bhakti@gmail.com</a>
-        <a href="https://wa.me/7304428880"><img src="whatsapp.png" alt="Phone icon"> 7304428880</a>
-        <a href="https://www.linkedin.com/in/bhakti-kateja" target="_blank" rel="noopener noreferrer"><img src="linkedin.png" alt="LinkedIn icon">LinkedIn Profile</a>
-        <a href="https://github.com/kateja-bhakti" target="_blank" rel="noopener noreferrer"><img src="github.png" alt="GitHub icon">GitHub Profile</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Bhakti Kateja | All rights reserved.
-  </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
